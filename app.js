@@ -38542,7 +38542,7 @@ window.App = {
     if(gameAddress != null) {
       TicTacToe.at(gameAddress).then(instance => {
         ticTacToeInstance = instance;
-        App.useAccountOne();
+        // App.useAccountOne();
         App.listenToEvents();
 
         return ticTacToeInstance.joinGame({from:account, value:web3.toWei(0.1, "ether"), gas:3000000});
