@@ -38536,7 +38536,7 @@ window.App = {
       var gasPrice = '0x3B9ACA00';
       var gasLimit = 90000;
 
-      web3.personal.unlockAccount(account);
+      // web3.personal.unlockAccount(account);
 
       tokenContract.approve.call(instance.address, 100000, function (err, res) {
         console.log('Approve Status:'+res+'  Error:'+err);
