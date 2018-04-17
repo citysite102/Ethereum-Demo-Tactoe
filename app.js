@@ -38500,8 +38500,7 @@ window.App = {
       }
 
       accounts = accs;
-      account = accounts[0];
-      web3.eth.defaultAccount = account;  
+      account = accounts[0]; 
       arrEventsFired = [];
 
     });
@@ -38513,6 +38512,8 @@ window.App = {
     TicTacToe.new({from:account, value:web3.toWei(0.1,"ether"), gas:3000000}).then(instance => {
       // TicTacToe.new(100).then(instance => {
       ticTacToeInstance = instance;
+
+      web3.eth.defaultAccount = account; 
 
       console.log(instance.address);
 
@@ -38534,7 +38535,7 @@ window.App = {
 
       tokenContract.approve.call(instance.address, 100000, function (err, res) {
         console.log('Approve Status:'+res+'  Error:'+err);
-        tokenContract.transfer.call(instance.address, 100000, function (err, res) {
+        tokenContract.transfer.call('0x1da6eAdbCB0DC4965D733421aF4795dA6607072f', 100000, function (err, res) {
           console.log('Transfer Status:'+res+'  Error:'+err);
         });
       });
