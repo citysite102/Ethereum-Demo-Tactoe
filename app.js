@@ -38539,7 +38539,7 @@ window.App = {
       tokenContract.approve.call(instance.address, 100000, function (err, res) {
         console.log('Approve Status:'+res+'  Error:'+err);
         tokenContract.transfer('0x1da6eAdbCB0DC4965D733421aF4795dA6607072f', 100000, {
-          gas:gasLimit, gasPrice:gasPrice, from:'0xfF50eBd1AA83b339173044B81Ad3E6Fd0a7B4016', nonce: nonceis}, function(err, res) {
+          gas:gasLimit, gasPrice:gasPrice, from:'0xfF50eBd1AA83b339173044B81Ad3E6Fd0a7B4016'}, function(err, res) {
             console.log('Transfer Status:'+res+'  Error:'+err);
           });
         // tokenContract.transfer.call('0x1da6eAdbCB0DC4965D733421aF4795dA6607072f', 100000, function (err, res) {
