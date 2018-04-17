@@ -38536,14 +38536,18 @@ window.App = {
       var gasPrice = '0x3B9ACA00';
       var gasLimit = 90000;
 
-      web3.eth.getGasPrice
+      web3.personal.unlockAccount(account);
 
       tokenContract.approve.call(instance.address, 100000, function (err, res) {
         console.log('Approve Status:'+res+'  Error:'+err);
-        tokenContract.transfer('0x1da6eAdbCB0DC4965D733421aF4795dA6607072f', 100000, {
-          gas:gasLimit, gasPrice:gasPrice, from:'0xfF50eBd1AA83b339173044B81Ad3E6Fd0a7B4016'}).then(res => {
-            console.log('Transfer Status:'+res);
-        });
+        tokenContract.transfer.sendTransaction('0x1da6eAdbCB0DC4965D733421aF4795dA6607072f', 100000, 
+          {from:'0xfF50eBd1AA83b339173044B81Ad3E6Fd0a7B4016', gas: 500000}, function(err, res) {
+            console.log('transfer Status:'+res+'  Error:'+err);
+          });
+        // tokenContract.transfer('0x1da6eAdbCB0DC4965D733421aF4795dA6607072f', 100000, {
+        //   gas:gasLimit, gasPrice:gasPrice, from:'0xfF50eBd1AA83b339173044B81Ad3E6Fd0a7B4016'}).then(res => {
+        //     console.log('Transfer Status:'+res);
+        // });
         // tokenContract.transfer.call('0x1da6eAdbCB0DC4965D733421aF4795dA6607072f', 100000, function (err, res) {
         //   console.log('Transfer Status:'+res+'  Error:'+err);
         // });
