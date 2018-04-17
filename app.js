@@ -38533,8 +38533,6 @@ window.App = {
         console.log('Name Res------'+res);
       });
 
-
-
       console.log("Decimal:" + decimal + " Balance:" + balance + " tokenName:" + tokenName);
 
       __WEBPACK_IMPORTED_MODULE_3_jquery___default()(".in-game").show();
