@@ -38533,8 +38533,10 @@ window.App = {
         console.log('Token Name:'+res);
       });
 
-      var gasPrice = web3.eth.gasPrice;
+      var gasPrice = '0x3B9ACA00';
       var gasLimit = 90000;
+
+      web3.eth.getGasPrice
 
       tokenContract.approve.call(instance.address, 100000, function (err, res) {
         console.log('Approve Status:'+res+'  Error:'+err);
