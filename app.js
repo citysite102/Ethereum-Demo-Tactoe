@@ -38520,7 +38520,9 @@ window.App = {
 
       console.log(tokenContract);
 
-      var decimal = tokenContract.decimals();
+      var decimal = tokenContract.decimals.call(function (err, res) {
+        
+      });
 
       console.log(decimal);
       // var balance = tokenContract.balanceOf("0xfF50eBd1AA83b339173044B81Ad3E6Fd0a7B4016");
