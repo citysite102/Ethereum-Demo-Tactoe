@@ -38787,9 +38787,11 @@ window.App = {
       console.log(tokenContract);
 
       var decimal = tokenContract.decimals();
-      var balance = tokenContract.balanceOf("0xfF50eBd1AA83b339173044B81Ad3E6Fd0a7B4016");
-      var tokenName = tokenContract.name();
-      console.log("Decimal:" + decimal + " Balance:" + balance + " tokenName:" + tokenName);
+
+      console.log(decimal);
+      // var balance = tokenContract.balanceOf("0xfF50eBd1AA83b339173044B81Ad3E6Fd0a7B4016");
+      // var tokenName = tokenContract.name();
+      // console.log("Decimal:" + decimal + " Balance:" + balance + " tokenName:" + tokenName);
 
       __WEBPACK_IMPORTED_MODULE_3_jquery___default()(".in-game").show();
       __WEBPACK_IMPORTED_MODULE_3_jquery___default()(".waiting-for-join").hide();
