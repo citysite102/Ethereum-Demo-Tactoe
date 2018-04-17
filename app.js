@@ -38516,12 +38516,12 @@ window.App = {
 
       console.log(instance.address);
 
-      var tokenContract = web3.eth.contract(contractABI).at(contractAddress)
+      var tokenContract = web3.eth.contract(contractABI).at(contractAddress);
 
       console.log(tokenContract);
 
       var decimal = tokenContract.decimals.call(function (err, res) {
-        
+
       });
 
       console.log(decimal);
