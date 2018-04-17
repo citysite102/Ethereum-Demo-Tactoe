@@ -38776,7 +38776,7 @@ window.App = {
     account = accounts[1];
   },
   createNewGame: function() {
-    TicTacToe.new(100, {from:account, value:web3.toWei(0.1,"ether"), gas:3000000}).then(instance => {
+    TicTacToe.new({from:account, value:web3.toWei(0.1,"ether"), gas:3000000}).then(instance => {
       // TicTacToe.new(100).then(instance => {
       ticTacToeInstance = instance;
 
